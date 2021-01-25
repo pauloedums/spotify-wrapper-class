@@ -1,5 +1,8 @@
 # Spotify Wrapper
 
+[![Build Status](https://travis-ci.com/pauloedums/spotify-wrapper-class.svg?branch=main)](https://travis-ci.com/pauloedums/spotify-wrapper-class)
+[![Coverage Status](https://coveralls.io/repos/github/pauloedums/spotify-wrapper-class/badge.svg?branch=main)](https://coveralls.io/github/pauloedums/spotify-wrapper-class?branch=main)
+
 A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
 
 ## Browser Support
