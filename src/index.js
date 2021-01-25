@@ -3,12 +3,12 @@ import {
   searchAlbums,
   searchPlaylists,
   searchArtists,
-  searchTracks
+  searchTracks,
 } from './search';
 import {
   getAlbum,
   getAlbumTracks,
-  getAlbums
+  getAlbums,
 } from './album';
 
 export {
@@ -19,5 +19,5 @@ export {
   searchTracks,
   getAlbum,
   getAlbumTracks,
-  getAlbums
-}
+  getAlbums,
+};
