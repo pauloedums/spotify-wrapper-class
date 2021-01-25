@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify Wrapper Test</title>
 </head>
 <body>
-  <div id="albums"></div>
 
-  <script src="../dist/spotify-wrapper.umd.js"></script>
-  <script>
-    const albums = spotifyWrapper.searchAlbums('Incubus');
-    const albumsEl = document.getElementById('albums');
-    albums.then(data => {
+<div id="albums"></div>
+
+<script src="../dist/spotify-wrapper.umd.js"></script>
+
+<script>
+  const spotify = new SpotifyWrapper({
+    token: 'BQCOxu3Jq4fhsXCjQPnSfK5EhAQ5RqOLCP3pVwnDV_Ca3hxMqSRmxHrPiyz8kyrRsC3ihwlaq2yWcq2svcZv69hOYu66PWtLSJZ0cR1v2RgqwKFUU4gpeGwwXr9WbWolc1iAFkCRlGXsdQvbZE7nV-iQmo4EHFocyUwhqanaGcykLaZIg8-cU-A0QQ-atiaghtWafmVzuUIAPt8ju4sgHZowLH1QHj_rW6BNruis_Qa3yqXIKN79QRqYioNqDWvlt8aQrclB5MX0k0szFrOd'
+  })
+
+  const albums = spotify.search.albums('The Clash');
+  const albumsEl = document.getElementById('albums');
+
+  albums
+    .then(data => {
       markup = data.albums.items.map(item =>
-      `<img src='${item.images[0].url}' alt='${item.name}' />`
+        `<img src='${item.images[0].url}' alt='${item.name}' />`
       ).join('');
 
       albumsEl.innerHTML = markup;
     })
-  </script>
+</script>
 </body>
 </html>
